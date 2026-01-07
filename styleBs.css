@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #ffffff !important;
+    }
+
+body{
+    font-family:'times new roman',sans-serif;
+    background-color: #000000;
+}
+
+.navbar{
+    background-color: #582323;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-menu{
+    background-color: #582323;
+}
+.dropdown-item:hover {
+    background-color: #bd3838;
+}
+
+.jumbtronContainer{
+    background-color: #582323;
+}
+
+.jumbotron{
+    background-color: #975F5F;
+}
+.container-fluid{
+    width: 50%;
+    margin: 0 auto;
+}

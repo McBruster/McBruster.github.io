@@ -28,7 +28,12 @@ body{
 
 .jumbotron{
     background-color: #975F5F;
+    height: 200px;
+    width: 800px;
+    margin: auto;
 }
+
+
 .container-fluid{
     width: 50%;
     margin: 0 auto;

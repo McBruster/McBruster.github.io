@@ -96,20 +96,43 @@
 // })();
 
 
+// (async () => {
+//   // 1️⃣ Load template
+//   const res = await fetch('/components/nav.html');
+//   if (!res.ok) throw new Error('Failed to load template: /components/nav.html');
+//   const html = await res.text();
+
+//   // 2️⃣ Append template to body
+//   const template = document.createElement('template');
+//   template.innerHTML = html;
+//   document.body.appendChild(template);
+
+//   // 3️⃣ Create <site-nav> elements AFTER template exists
+//   document.querySelectorAll('site-nav').forEach(el => {
+//     const navTemplate = document.getElementById('site-nav');
+//     el.appendChild(navTemplate.content.cloneNode(true));
+//   });
+// })();
+
 (async () => {
-  // 1️⃣ Load template
+  // Load nav template
   const res = await fetch('/components/nav.html');
   if (!res.ok) throw new Error('Failed to load template: /components/nav.html');
   const html = await res.text();
 
-  // 2️⃣ Append template to body
+  // Append template to body
   const template = document.createElement('template');
   template.innerHTML = html;
   document.body.appendChild(template);
 
-  // 3️⃣ Create <site-nav> elements AFTER template exists
+  // Clone template into all <site-nav> elements
   document.querySelectorAll('site-nav').forEach(el => {
     const navTemplate = document.getElementById('site-nav');
+    if (!navTemplate) {
+      console.error('site-nav template not found!');
+      return;
+    }
     el.appendChild(navTemplate.content.cloneNode(true));
   });
 })();
+

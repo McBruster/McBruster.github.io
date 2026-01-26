@@ -33,8 +33,10 @@ body{
     margin: auto;
 }
 
-
 .container-fluid{
     width: 50%;
     margin: 0 auto;
 }
+
+#skills{  
+    column-count: 2;}
